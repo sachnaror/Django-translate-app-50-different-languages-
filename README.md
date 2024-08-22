@@ -2,7 +2,7 @@
 
 A simple yet powerful translator app built using Django that can translate text into up to 50 different languages. The app leverages the `googletrans` Python library to provide seamless language translations.
 
-<img src="https://github.com/sachnaror/core/raw/main/image-1.png" alt="alt text" width="500" height="500">
+<img src="https://github.com/sachnaror/core/raw/main/image-1.png" alt="alt text" width="500" height="400">
 
 ## Features
 

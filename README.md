@@ -1,4 +1,4 @@
-# Translator
+# Language-Translator
 
 A simple yet powerful translator app built using Django that can translate text into up to 50 different languages. The app leverages the `googletrans` Python library to provide seamless language translations.
 

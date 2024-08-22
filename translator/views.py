@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from googletrans import Translator
 
-#from .forms import TranslationForm
+from .forms import TranslationForm
 from .models import Translation
 
 # Create your views here.
@@ -16,7 +16,6 @@ def translate_view(request):
             source_text = form.cleaned_data['source_text']
             source_lang_slug = form.cleaned_data['source_lang']
             target_lang_slug = form.cleaned_data['target_lang']
-
 
             try:
                 #Google API integration

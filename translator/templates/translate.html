@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content m-5">
+    <div class="col-md-5 mx-5">
+        <div class="shadow p-1 mt-3 p-4 bg-secondary text-white rounded mb-3">
+            <h1><center>Translator</center></h1>
+        </div>
+        <div class="card">
+            <div class="shadow p-3 card-body">
+                <form method = "POST" action="{% url 'translate' %}">
+                    {% csrf_token %}
+                    <div>
+                        <br>
+                        {{ form.source_text }}
+                        <br>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="id_source_lang">From: </label>
+                        {{ form.source_lang }}
+                        <br>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="id_target_lang">To: </label>
+                        {{ form.target_lang }}
+                        <br>
+                    </div>
+                    <button class="btn btn-secondary" style="float: right;" type = "submit">Translate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% if translated_text %}
+    <div class="col-md-5 mx-5">
+        <div class="shadow p-1 mt-4 p-4 bg-success text-white rounded mb-3">
+            <h1><center>Translated text</center></h1>
+        </div>
+        <div class="card">
+            <div class="shadow p-3 card-body">
+                <div class="card-body">
+                    <p>{{translated_text}}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    </div>
+</div>
+
+{% endblock content %}
